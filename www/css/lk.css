@@ -5,9 +5,12 @@
     outline: none;
 }
 
-html{height: 100%; text-align: center;}
+html {
+    height: 100%;
+    text-align: center;
+}
 
-body{
+body {
     width: 100%;
     height: 100%;
     color: #333;
@@ -21,29 +24,36 @@ body{
 a {
     color: #f58b8b;
     text-decoration: none;
-    transition: all.6s ease;
-    -moz-transition: all.6s ease;
-    -webkit-transition: all.6s ease;
-    -ms-transition: all.6s ease;
+    transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -ms-transition: all .6s ease;
 }
 
 a:hover {
     color: #8b9ff5;
     text-decoration: none;
-    transition: all.6s ease;
-    -moz-transition: all.6s ease;
-    -webkit-transition: all.6s ease;
-    -ms-transition: all.6s ease;
+    transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -ms-transition: all .6s ease;
 }
 
-a:active{
+a:active {
     color: #8ce4a6;
 }
 
-.right{ float:right; }
-.left{  float:left;  }
-.clear{ clear:both; }
+.right {
+    float: right;
+}
 
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
 
 @media (min-width: 960px) {
     #mascot {
@@ -55,6 +65,7 @@ a:active{
         left: 10vw;
     }
 }
+
 @media (max-width: 959px) {
     #mascot {
         visibility: hidden;
@@ -65,81 +76,36 @@ a:active{
 }
 
 /* Selection Block*/
-::selection { background: #f58b8b; color:#fff; }
-::-moz-selection { background: #f58b8b; color:#fff; }
+::selection {
+    background: #f58b8b;
+    color: #fff;
+}
 
-header, footer{
+::-moz-selection {
+    background: #f58b8b;
+    color: #fff;
+}
+
+header, footer {
     width: 98%;
     background: #fff;
-    min-height: 20px;
+    min-height: 3vh;
     float: left;
 }
 
-header{
+header {
     border-bottom: 2px solid silver;
     padding: 1%;
 }
 
-#logo{
+#logo {
     font-size: 3vh;
     font-family: "Comic Sans MS", sans-serif;
 }
 
-/* Стили для формы*/
-
-form{
-    width: 60%;
-    margin-left: 20%;
-    float:left;
-}
-
-form label {
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-form input {
-    border-radius: 5px;
-    border: 2px solid silver;
-    padding: 5px;
-    float: left;
-    clear:both;
-    width: 40%;
-    background-color: #fafafa;
-    margin-bottom: 10px;
-}
-
-form input:focus, form textarea:focus { border: 2px solid #f58b8b; }
-
-form textarea {
-    width: 60%;
-    float: left;
-    clear: both;
-    background-color: #fafafa;
-    border: 2px solid silver;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.3em;
-}
-
-form #send {
-    float: left;
-    padding: 10px;
-    background-color: #f37a7a;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #fff
-}
-form #send:hover {
-    background-color: #b4012d;
-}
-
 /*Стили для футера*/
 
-footer{
+footer {
     padding: 1%;
     border-top: 2px solid silver;
     margin-top: 1vh;
@@ -147,7 +113,11 @@ footer{
     font-size: 2vh;
 }
 
-footer img{width: 12%; float: left;  margin-right: 0;}
+footer img {
+    width: 12%;
+    float: left;
+    margin-right: 0;
+}
 
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
@@ -179,15 +149,17 @@ footer img{width: 12%; float: left;  margin-right: 0;}
     border: 0.3vh solid silver;
     background-color: #fafafa;
 }
-#page-wrap h6{
+
+#page-wrap h6 {
     font-family: "Comic Sans MS", sans-serif;
     color: #181818;
 }
 
-h6 + .buttonChoiseMenu{
+h6 + .buttonChoiseMenu {
     margin-top: 3%
 }
-.buttonChoiseMenu+.buttonChoiseMenu{
+
+.buttonChoiseMenu + .buttonChoiseMenu {
     margin-top: 8%
 }
 
@@ -211,6 +183,18 @@ h6 + .buttonChoiseMenu{
     top: 13vh;
     height: 3vw;
     width: 15vw;
+
+}
+#submit {
+    float: left;
+    position: absolute;
+    right: 5vw;
+    bottom: 5vh;
+    height: 3vw;
+    width: 35vw;
+}
+
+#unlogButton, #submit{
     border: 0.3vh solid silver;
     font-family: "Comic Sans MS", sans-serif;
     font-size: 1vw;
@@ -219,16 +203,21 @@ h6 + .buttonChoiseMenu{
     color: #181818;
     border-radius: 0.5vh;
     background-color: #fafafa;
-    transition: all.6s ease;
-    -moz-transition: all.6s ease;
-    -webkit-transition: all.6s ease;
-    -ms-transition: all.6s ease;
-
+    transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -ms-transition: all .6s ease;
 }
+
+
 #unlogButton:hover{
     background-color: #ffbfbf;
 }
+#submit:hover{
+    background-color: #93c762;
+}
 
+/*сомнения*/
 input[type=text].field {
     border-radius: 1vh;
     border: 0.3vh solid silver;
@@ -239,30 +228,15 @@ input[type=text].field {
     margin-top: 3vh;
     font-size: 3vh;
 }
-
-input[type=text].field:focus { border: 2px solid #f58b8b; }
-
-#loginButton, #regButton {
-    border-radius: 1vh;
-    border: 0.3vh solid silver;
-    line-height: 150%;
-    float: left;
-    position: absolute;
-    font-size: 1.8vw;
-    color: #181818;
-    font-family: "Comic Sans MS", sans-serif;
-    background-color: #bffffa;
-    left: 10%;
-    bottom: 10%;
-    width: 80%;
-    height: 10%;
+input[type=text].field:focus {
+    border: 2px solid #f58b8b;
 }
-#regButton {
-    background-color: #ffbfbf;
+/*------*/
+
+.buttonChoiseMenu:hover, #loginButton:hover {
+    background-color: #93c762;
+    color: #181818
 }
-
-.buttonChoiseMenu:hover, #loginButton:hover { background-color: #93c762; color: #181818 }
-
 
 @media (min-width: 960px) {
     #choiseMenuZone {
@@ -291,12 +265,12 @@ input[type=text].field:focus { border: 2px solid #f58b8b; }
         width: 90%;
     }
 
-    #page-wrap h6{
+    #page-wrap h6 {
         font-family: "Comic Sans MS", sans-serif;
-        font-size: 5.5vh;
+        font-size: 5vh;
     }
 
-    #unlogButton{
+    #unlogButton {
         right: 2vh;
         top: 13vh;
         height: 15vw;
@@ -306,33 +280,127 @@ input[type=text].field:focus { border: 2px solid #f58b8b; }
         background: #fafafa url("../img/logOut.png") no-repeat center;
         background-size: 100%;
     }
-
-
-    input[type=text].field {
-        margin-top: 6vh;
-        height: 30vh;
-        font-size: 10vh;
-    }
-
-    #loginButton, #regButton {
-        font-size: 10vh;
+    #submit {
+        position: relative;
+        left: 10%;
+        margin-top: 5%;
+        width: 80%;
+        font-size: 8vh;
+        height: 15vh;
     }
 }
 
 /*-------------------------------------------------------------------------------*/
 /*-----------------Подать заявку-------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
-#leftZonde{
-    width: 37%;
+
+#leftZone, #rightZone{
     float: left;
-    background-color: #0000ff;
-    height: 80vh;
-    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vw;
+    padding-left: 2vh;
 }
-#rightZonde{
-    width: 57%;
+
+#leftZone {
+    margin-left: 8vw;
+    width: 50%;
+    height: 70vh;
+}
+
+#rightZone {
     float: left;
-    background-color: #f00;
-    height: 80vh;
-    margin-right: 3vw;
+    width: 35%;
+    height: 60vh;
+}
+
+#infoPage {
+    font-size: 4vh;
+    padding-top: 9vh;
+    margin-bottom: 2vh;
+}
+
+/* Стили для формы*/
+
+form {
+    width: 100%;
+    float: left;
+}
+
+.oneBlock {
+    width: 96%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2vh;
+    height: 8%;
+
+}
+
+.oneBlock label, .oneBlock input[type=text], #rightZone, .oneBlock div label{
+    font-size: 2.5vh;
+    float: left;
+    vertical-align: middle;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.oneBlock input[type=text] {
+    flex: 1;
+    float: left;
+    border-radius: 1vh;
+    border: 0.35vh solid silver;
+    margin-left: 1.5vw;
+    padding-left: 0.7vw;
+    background-color: #fafafa;
+}
+
+.oneBlock input[type=radio] {
+    float: left;
+    margin-left: 1.5vw;
+    padding-left: 1%;
+    margin-right: 0.7vh;
+    display: inline-block;
+    margin-top: 0.7vh;
+}
+
+.oneBlock input:focus, form #rightZone textarea:focus {
+    border: 0.35vh solid #f58b8b;
+}
+
+form #rightZone textarea {
+    resize: none;
+    width: 60%;
+    float: left;
+    clear: both;
+    background-color: #fafafa;
+    border: 2px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.3em;
+}
+#rightZone #message{
+    width: 90%;
+    height: 85%;
+}
+
+
+@media (min-width: 960px) {
+
+}
+
+@media (max-width: 959px) {
+    #leftZone, #rightZone {
+        width: 90vw;
+        margin-left: 5vw;
+        height: 400px;
+    }
+
+    .oneBlock label, .oneBlock input[type=text], #rightZone, .oneBlock div label {
+        font-size: 2vw;
+    }
+
 }
