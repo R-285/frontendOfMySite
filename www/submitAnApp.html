@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="Агенство, Ангел-Хранитель, Страшный суд">
     <meta name="description" content="Сайт по подбору Ангелов-хранителей">
-    <link rel="stylesheet" href="css/lk.css">
+    <link rel="stylesheet" href="css/farmsApp.css">
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Ангелочек</title>
 </head>
@@ -18,57 +18,52 @@
     <form>
         <div id="leftZone">
             <div class="oneBlock">
-                <label for="parentsFIO">ФИО родителя</label>
-                <input type="text" id="parentsFIO" v-model="FIOParents" name="subject" placeholder="ФИО родителя"/>
-            </div>
-            <div class="oneBlock">
-                <label for="childFIO">ФИО ребенка</label>
-                <input type="text" id="childFIO" name="email" placeholder="ФИО ребенка"/>
+                <label for="childName">Имя ребенка</label>
+                <input v-model="chileName" type="text" id="childName" name="email" placeholder="Имя ребенка"/>
             </div>
             <div class="oneBlock">
                 <label for="alterChiledName">Альтернативное имя ребенка</label>
-                <input type="text" id="alterChiledName" name="name" placeholder="Альтернативное имя ребенка"/>
+                <input v-model="alterName" type="text" id="alterChiledName" name="name" placeholder="Альтернативное имя ребенка"/>
             </div>
             <div class="oneBlock">
                 <label>Предположительный пол ребенка</label>
                 <div>
-                    <input type="radio" id="huey" name="drone" value="male" checked class="radio">
+                    <input v-model="sexChiled" type="radio" id="huey" name="drone" value="1" checked class="radio">
                     <label for="huey">М</label>
                 </div>
                 <div>
-                    <input type="radio" id="dewey" name="drone" value="female" class="radio">
+                    <input v-model="sexChiled" type="radio" id="dewey" name="drone" value="2" class="radio">
                     <label for="dewey">Ж</label>
                 </div>
                 <div>
-                    <input type="radio" id="louie" name="drone" value="noInfo" class="radio">
+                    <input v-model="sexChiled" type="radio" id="louie" name="drone" value="0" class="radio">
                     <label for="louie">Не знаю</label>
                 </div>
-
             </div>
             <div class="oneBlock">
                 <label for="medLink">Ссылка на мед. справку</label>
-                <input type="text" id="medLink" name="subject" placeholder="Ссылка на мед. справку"/>
+                <input v-model="linkMed" type="text" id="medLink" name="subject" placeholder="Ссылка на мед. справку"/>
             </div>
             <div class="oneBlock">
                 <label for="pasLink">Ссылка на копию паспорта</label>
-                <input type="text" id="pasLink" name="email" placeholder="Ссылка на копию паспорта"/>
+                <input v-model="linkPas" type="text" id="pasLink" name="email" placeholder="Ссылка на копию паспорта"/>
             </div>
             <div class="oneBlock">
                 <label for="linkAnother">Ссылка на прочие документы</label>
-                <input type="text" id="linkAnother" name="name" placeholder="Ссылка на прочие документы"/>
+                <input v-model="linkAnother" type="text" id="linkAnother" name="name" placeholder="Ссылка на прочие документы"/>
             </div>
             <div class="oneBlock">
                 <label for="expecting">Ожидания от Ангела-хранителя</label>
-                <input type="text" id="expecting" name="subject" placeholder="Ожидания от Ангела-хранителя"/>
+                <input v-model="expAngel" type="text" id="expecting" name="subject" placeholder="Ожидания от Ангела-хранителя"/>
             </div>
             <div class="oneBlock">
                 <label for="expecSkills">Желаемые способности к совершеннолетию</label>
-                <input type="text" id="expecSkills" name="name" placeholder="Желаемые способности"/>
+                <input v-model="expSkills" type="text" id="expecSkills" name="name" placeholder="Желаемые способности"/>
             </div>
         </div>
         <div id="rightZone">
             <label for="message">Комментарии</label>
-            <textarea placeholder="Введите ваше сообщение" id="message" name="message"></textarea>
+            <textarea v-model="comments" placeholder="Введите ваше сообщение" id="message" name="message"></textarea>
         </div>
         <button type="button" v-on:click="submit" id="submit">Отправить</button>
     </form>

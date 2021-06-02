@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="Агенство, Ангел-Хранитель, Страшный суд">
     <meta name="description" content="Сайт по подбору Ангелов-хранителей">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Ангелочек</title>
 </head>
@@ -15,21 +15,22 @@
         <a href="index.html" title="На главную" id="logo">Агентство по подбору Ангелов-Хранителей "Ангелочек"</a>
     </header>
     <div class="clear"><br></div>
-    <div id="log_reg_zone">
-        <a v-on:click="changeTrue" title="Посмотреть статью" id="login" >Войти</a>
-        <a v-on:click="changeFalse" title="Посмотреть статью" id="registration" >Регистрация</a>
-        <div v-if="showAuth">
-            <input type="text" class="field" placeholder="Логин"/>
-            <input type="text" class="field" placeholder="Пароль"/>
-            <a href="" title="Посмотреть статью" id="loginButton">Войти</a>
-        </div>
-        <div v-else>
-            <input type="text" class="field" placeholder="Имя"/>
-            <input type="text" class="field" placeholder="E-mail"/>
-            <input type="text" class="field" placeholder="Телефон"/>
-            <a href="" title="Посмотреть статью" id="regButton">Регистрация</a>
-        </div>
-    </div>
+    <form id="log_reg_zone">
+
+            <a v-on:click="changeTrue" title="Открыть вкладку для входа в свой аккаунт" id="login">Войти</a>
+            <a v-on:click="changeFalse" title="Открыть вкладку создания аккаунта" id="registration">Регистрация</a>
+            <div v-if="showAuth">
+                <input v-model="login" type="text" class="field" placeholder="Логин"/>
+                <input v-model="password" type="text" class="field" placeholder="Пароль"/>
+                <button type="button" v-on:click="logInAcc" title="Войти в свой аккаунт" id="loginButton">Войти</button>
+            </div>
+            <div v-else>
+                <input v-model="name" type="text" class="field" placeholder="Имя"/>
+                <input v-model="eMail" type="text" class="field" placeholder="E-mail"/>
+                <input v-model="phone" type="text" class="field" placeholder="Телефон"/>
+                <button type="button" v-on:click="regNewAcc" title="Создать новый аккаунт" id="regButton">Регистрация</button>
+            </div>
+    </form>
     <img src="img/mascot.png" id="mascot" alt="Милый ангелочек-маскот" title="Маскот"/>
 </div>
 <footer>

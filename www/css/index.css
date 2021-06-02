@@ -88,53 +88,8 @@ header{
 /* Стили для формы*/
 
 form{
-    width: 60%;
-    margin-left: 20%;
-    float:left;
-}
-
-form label {
-    float: left;
     width: 100%;
-    margin-bottom: 10px;
-}
-
-form input {
-    border-radius: 5px;
-    border: 2px solid silver;
-    padding: 5px;
-    float: left;
-    clear:both;
-    width: 40%;
-    background-color: #fafafa;
-    margin-bottom: 10px;
-}
-
-form input:focus, form textarea:focus { border: 2px solid #f58b8b; }
-
-form textarea {
-    width: 60%;
-    float: left;
-    clear: both;
-    background-color: #fafafa;
-    border: 2px solid silver;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.3em;
-}
-
-form #send {
-    float: left;
-    padding: 10px;
-    background-color: #f37a7a;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #fff
-}
-form #send:hover {
-    background-color: #b4012d;
+    float:left;
 }
 
 /*Стили для футера*/
