@@ -15,11 +15,11 @@
         <a href="index.html" title="На главную" id="logo">Агентство по подбору Ангелов-Хранителей "Ангелочек"</a>
     </header>
     <h6 title="Статус" id="infoPage">Подача заявки на подбор Ангела-Хранителя</h6>
-    <form method="post">
+    <form>
         <div id="leftZone">
             <div class="oneBlock">
                 <label for="parentsFIO">ФИО родителя</label>
-                <input type="text" id="parentsFIO" name="subject" placeholder="ФИО родителя"/>
+                <input type="text" id="parentsFIO" v-model="FIOParents" name="subject" placeholder="ФИО родителя"/>
             </div>
             <div class="oneBlock">
                 <label for="childFIO">ФИО ребенка</label>
@@ -62,10 +62,6 @@
                 <input type="text" id="expecting" name="subject" placeholder="Ожидания от Ангела-хранителя"/>
             </div>
             <div class="oneBlock">
-                <label for="valOfHards">Степень сложности испытаний жизни</label>
-                <input type="text" id="valOfHards" name="email" placeholder="Степень сложности испытаний жизни"/>
-            </div>
-            <div class="oneBlock">
                 <label for="expecSkills">Желаемые способности к совершеннолетию</label>
                 <input type="text" id="expecSkills" name="name" placeholder="Желаемые способности"/>
             </div>
@@ -74,10 +70,10 @@
             <label for="message">Комментарии</label>
             <textarea placeholder="Введите ваше сообщение" id="message" name="message"></textarea>
         </div>
+        <button type="button" v-on:click="submit" id="submit">Отправить</button>
     </form>
-    <button type="submit" id="submit">Отправить</button>
     <a href="mainLK.html">
-        <input title="В меню" type="button" id="unlogButton" value="Вернуться в главное меню">
+        <input title="В меню" type="button" id="meinMenuButton" value="Вернуться в главное меню">
     </a>
 </div>
 <footer>
@@ -85,6 +81,6 @@
     <span class="right">Соц. кнопки <a href="https://vk.com"><img src="img/VK.png" alt="Группа в ВК"
                                                                   title="Группа в ВК"></a></span>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/submitApp.js"></script>
 </body>
 </html>
