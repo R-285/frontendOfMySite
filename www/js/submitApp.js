@@ -13,22 +13,22 @@ new Vue({
     },
     methods: {
         submit(){
-            if(this.chileName == "" || this.alterName == "" || this.sexChiled == "" || this.linkMed == "" || this.linkPas == "" || this.linkAnother == "" || this.expAngel == "" ||
-                this.expSkills == "" || this.comments == "" )
+            if(this.chileName == "" || this.sexChiled == "" || this.linkMed == "" || this.linkPas == "" )
                 alert("Не все поля заполнены")
             else {
                 fetch('https://jsonplaceholder.typicode.com/posts/1', {
+                    /*0.0.0.0:8080/{userId}/request/add*/
                     method: 'PUT',
                     body: JSON.stringify({
-                        chileName: this.chileName,
-                        alterName: this.alterName,
-                        sexChiled: this.sexChiled,
-                        linkMed: this.linkMed,
-                        linkPas: this.linkPas,
-                        linkAnother: this.linkAnother,
-                        expAngel: this.expAngel,
-                        expSkills: this.expSkills,
-                        comments: this.comments,
+                        childName: this.chileName,
+                        alternativeChildName: this.alterName,
+                        sex: this.sexChiled,
+                        medicalCertificate: this.linkMed,
+                        passport: this.linkPas,
+                        otherDocuments: this.linkAnother,
+                        expectations: this.expAngel,
+                        abilities: this.expSkills,
+                        comment: this.comments,
                     }),
                     headers: {
                         'Content-type': 'application/json; charset=UTF-8',
@@ -36,9 +36,12 @@ new Vue({
                 })
                     .then((response) => response.json())
                     .then((json) => {
-                        if (json.chileName === "hui")
-                            alert("Внимание! Хуи обноружены.");
-
+                        if (json.error == "Invalid childName")
+                            alert("Invalid childName");
+                        if (json.error == "Invalid medicalCertificate")
+                            alert("Invalid medicalCertificate");
+                        if (json.error == "Invalid passport")
+                            alert("Invalid passport");
                     });
             }
         }

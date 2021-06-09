@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="keywords" content="Агенство, Ангел-Хранитель, Страшный суд">
-  <meta name="description" content="Сайт по подбору Ангелов-хранителей">
-  <link rel="stylesheet" href="css/farmsApp.css">
-  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <title>Ангелочек</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Агенство, Ангел-Хранитель, Страшный суд">
+    <meta name="description" content="Сайт по подбору Ангелов-хранителей">
+    <link rel="stylesheet" href="css/farmsApp.css">
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Ангелочек</title>
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <div id="page-wrap">
-  <header>
-    <a href="index.html" title="На главную" id="logo">Агентство по подбору Ангелов-Хранителей "Ангелочек"</a>
-  </header>
-  <h6 title="Статус" id="infoPage">Активные заявки</h6>
-  <form>
-    <div id="middleZoneActive">
-      <div>
-
-      </div>
-    </div>
-  </form>
-  <a href="mainLK.html">
-    <input title="В меню" type="button" id="meinMenuButton" value="Вернуться в главное меню">
-  </a>
+    <header>
+        <a href="index.html" title="На главную" id="logo">Агентство по подбору Ангелов-Хранителей "Ангелочек"</a>
+    </header>
+    <h6 title="Статус" id="infoPage">Активные заявки</h6>
+    <form>
+        <div id="middleZoneActive">
+            <span class="backColor"> ID заявки </span>  Имя ребенка <span class="backColor"> статус заявки </span> Имя Ангела-Хранитля
+            <div v-for="currency in info" class="currency">
+                ID = {{ currency.requestId }}, имя ребенка = {{ currency.childName }}, статус заявки = {{ currency.status }}, Имя ангела-Хранителя = {{ currency.guardianAngelName }}
+            </div>
+            Статусы заявки: 0 - Заявка на обработке, 1 - Приостановка (требуются дополнительные данные), 2 - Заявка обработана (подобраны Ангелы),
+            3 - Ожидание оплаты (Ангел выбран),
+            4 - Заявка завершена (произведена оплата),
+            5 - Заявка отклонена (не произведена оплата / не выбран Ангел)
+        </div>
+    </form>
+    <a href="mainLK.html">
+        <input title="В меню" type="button" id="meinMenuButton" value="Вернуться в главное меню">
+    </a>
 </div>
 <footer>
-  <span class="left">Все права защищены Сашкой из общаги &copy; 2021</span>
-  <span class="right">Соц. кнопки <a href="https://vk.com"><img src="img/VK.png" alt="Группа в ВК"
-                                                                title="Группа в ВК"></a></span>
+    <span class="left">Все права защищены Сашкой из общаги &copy; 2021</span>
+    <span class="right">Соц. кнопки <a href="https://vk.com"><img src="img/VK.png" alt="Группа в ВК"
+                                                                  title="Группа в ВК"></a></span>
 </footer>
 <script src="js/activApp.js"></script>
 </body>

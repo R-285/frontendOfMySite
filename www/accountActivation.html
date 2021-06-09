@@ -17,9 +17,9 @@
     <div class="clear"><br></div>
     <div id="choiseMenuZone">
         <h6 title="ЛК">Активация аккаунта</h6>
-        <input type="text" class="field" placeholder="Придумайте логин"/>
-        <a href="mainLK.html" title="Создать аккаут как родитель" class="buttonChoiseMenu">Зарегистрироваться как родитель</a>
-        <a title="Создать аккаут в качестве Ангела-Хранителя" class="buttonChoiseMenu">Зарегистрироваться как Ангел-Хранитель</a>
+        <input v-model="login" type="text" class="field" placeholder="Придумайте логин"/>
+        <a v-on:click="logAsParent" title="Создать аккаут как родитель" class="buttonChoiseMenu">Зарегистрироваться как родитель</a>
+        <a v-on:click="logAsAngle" title="Создать аккаут в качестве Ангела-Хранителя" class="buttonChoiseMenu">Зарегистрироваться как Ангел-Хранитель</a>
     </div>
     <a href="index.html">
         <input title="На главную" type="button" id="unlogButton" value="Выйти из личного кабинета">
@@ -31,5 +31,6 @@
     <span class="right">Соц. кнопки <a href="https://vk.com"><img src="img/VK.png" alt="Группа в ВК"
                                                                   title="Группа в ВК"></a></span>
 </footer>
+<script src="js/activationAccount.js"></script>
 </body>
 </html>

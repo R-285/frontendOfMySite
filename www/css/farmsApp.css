@@ -328,27 +328,15 @@ form #rightZone textarea {
     border: 0.7vh solid silver;
     border-radius: 1vh;
 }
+.backColor{
+    background-color: #f7f7f7;
 
-#rightZoneActive {
-    width: 40%;
-    background-color: greenyellow;
 }
-#rightZoneActive p, #leftZoneActive p {
-    font-size: 1.3em;
-    font-family: "Comic Sans MS", sans-serif;
-    text-align: left;
-}
-#rightZoneActive div, #leftZoneActive div {
-    width: 95%;
-    height: 65vh;
-    resize: none;
-    font-family: "Comic Sans MS", sans-serif;
-    float: left;
-    clear: both;
-    background-color: #fff;
-    border: 2px solid silver;
-    border-radius: 3px;
-    font-size: 1.3em;
+
+#middleZoneActive div {
+    width: 99%;
+    height: 3vh;
+    background-color: #8ce4a6;
 }
 
 @media (max-width: 959px) {
@@ -359,18 +347,5 @@ form #rightZone textarea {
     }
     .oneBlock label, .oneBlock input[type=text], #rightZone, .oneBlock div label {
         font-size: 2vw;
-    }
-    #rightZoneActive, #leftZoneActive{
-        width: 90vw;
-        margin-left: 5vw;
-        height: 700px;
-        font-size: 2vw;
-    }
-    #rightZoneActive div, #leftZoneActive div {
-        margin-top: 2%;
-        height: 90%;
-        border: 2px solid silver;
-        border-radius: 3px;
-        font-size: 1.3em;
     }
 }
